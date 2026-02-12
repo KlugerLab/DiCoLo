@@ -1,0 +1,48 @@
+template:
+  bootstrap: 3
+
+url: https://klugerLab.github.io/DiCoLo
+
+reference:
+  - title: "Compute Gene-gene Optimal Transport Distance"
+    contents:
+      - '`SelectCommonGenes`'
+      - '`ComputeGeneEMD`'
+      - '`LoadGeneEMD`'
+  - title: "Construct Gene Graphs"
+    contents:
+      - '`ComputeGraphOperator`'
+      - '`ComputeDifferentialOperator`'
+  - title: "Select Significant Genes & Gene Modules"
+    contents:
+      - '`FindKneePoint`'
+      - '`SelectSignificantGenes`'
+      - '`ClusterGenes`'
+      - '`RankGeneModules`'
+  - title: "Visualization"
+    contents:
+      - '`ObtainGeneTSNE`'
+      - '`VisualizeGeneTSNE`'
+  - title: "Other"
+    contents:
+      - '`RunSVD`'
+
+navbar:
+  structure:
+    left:
+    - home
+    - reference
+    - articles
+    right: github
+  components:
+    reference:
+      text: Reference
+      href: reference/index.html
+    articles:
+      text: Articles
+      menu:
+      - text: Example on mouse dermal scRNA-seq
+        href: articles/DiCoLo_demo.html
+  right:
+  - icon: fa-github
+    href: https://github.com/KlugerLab/DiCoLo

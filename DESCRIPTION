@@ -1,0 +1,39 @@
+Package: DiCoLo
+Title: Differential Co-Localization analysis
+Version: 1.0.0
+Authors@R: 
+    person("Ruiqi", "Li", email = "ruiqi.li@yale.edu", 
+    role = c("aut", "cre"), comment = c(ORCID = "0000-0002-9053-1678"))
+Description: Differential Co-Localization analysis (DiCoLo) is a computational framework 
+    designed for capturing condition-specific co-localized gene patterns within 
+    single-cell RNA sequencing data.
+License: MIT + file LICENSE
+Encoding: UTF-8
+URL: https://klugerLab.github.io/DiCoLo/, https://github.com/KlugerLab/DiCoLo
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Depends:
+  R (>= 4.4)
+Imports:
+    dplyr,
+    ggplot2,
+    locfdr,
+    Matrix,
+    RColorBrewer,
+    rARPACK,
+    Rtsne,
+    dynamicTreeCut,
+    Seurat (>= 5.0),
+    GeneTrajectory,
+    BiocManager
+Remotes:
+    KlugerLab/GeneTrajectory
+Suggests:
+    devtools,
+    testthat (>= 3.0.0),
+    rstudioapi,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Config/testthat/edition: 3

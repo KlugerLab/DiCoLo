@@ -25,9 +25,35 @@ Differential Co-Localization analysis (DiCoLo) is a computational framework desi
   * Assemble significant DiCoLo genes into co-localized gene modules.
 
 ```{r pressure, echo=FALSE, out.width="100%", out.height="auto"}
-knitr::include_graphics("./figures/DiCoLo_workflow.png")
+knitr::include_graphics("./man/figures/DiCoLo_workflow.png")
+```
+
+
+## Installation
+
+DiCoLo can be installed in R as follows:
+
+```{r, eval=FALSE}
+install.packages("devtools")
+devtools::install_github("KlugerLab/DiCoLo")
+
+library("DiCoLo")
 ```
 
 
 ## Example tutorial
-Please check the DiCoLo tutorial, available in both [Rmd](https://github.com/KlugerLab/DiCoLo/blob/main/vignettes/DiCoLo_demo.Rmd) and [HTML](https://github.com/KlugerLab/DiCoLo/blob/main/vignettes/DiCoLo_demo.html). The supporting functions used in the tutorial are available in [`DiCoLo_functions.R`](https://github.com/KlugerLab/DiCoLo/blob/main/vignettes/DiCoLo_functions.R).
+
+Please check [DiCoLo tutorial](https://klugerLab.github.io/DiCoLo/articles/).
+
+
+## References
+
+References of DiCoLo functions can be found [here](https://klugerLab.github.io/DiCoLo/reference/index.html).
+
+For additional information, please reference our pre-print:
+
+**DiCoLo: Integration-free and cluster-free detection of localized differential gene co-expression in single-cell data**
+Ruiqi Li, Junchen Yang, Pei-Chun Su, Ariel Jaffe, Ofir Lindenbaum, Yuval Kluger
+*bioRxiv* 2025 November 26. doi: https://doi.org/10.1101/2025.11.23.689932
+
+

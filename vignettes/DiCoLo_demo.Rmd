@@ -27,16 +27,17 @@ Differential Co-Localization analysis (DiCoLo) is a computational framework desi
   * Assemble significant DiCoLo genes into co-localized gene modules.
 
 ```{r pressure, echo=FALSE, out.width="100%", out.height="auto"}
-knitr::include_graphics("../figures/DiCoLo_workflow.png")
+knitr::include_graphics("../man/figures/DiCoLo_workflow.png")
 ```
 
 # Loading required R packages
 ```{r, warning = FALSE, message=FALSE}
 ##### Load required R libraries
+library("DiCoLo")
 library("Seurat")
 library("ggplot2")
 library("patchwork")
-source("./DiCoLo_functions.R")
+library("RColorBrewer")
 ```
 
 # Loading example data
@@ -46,6 +47,9 @@ We use a 10x mouse embryonic skin dataset which includes a SmoM2 mutant sample w
 dir.path.data = "~/" # Specify the directory path where you want to save the data
 file_name1 = "data_S_smom2_dermal_E13.5_MUT.rds" # Specify the file name for saving the mutant
 file_name2 = "data_S_smom2_dermal_E13.5_CTL.rds" # Specify the file name for saving the wildtype
+```
+```{r, warning = FALSE, message=FALSE, include = FALSE}
+source("./paths.R")
 ```
 ```{r dimplot, warning = FALSE, message=FALSE, results='hide', fig.retina=1, out.width="100%",fig.width=12, fig.height=5}
 data_S_MUT <- readRDS(file = file.path(dir.path.data,file_name1))
