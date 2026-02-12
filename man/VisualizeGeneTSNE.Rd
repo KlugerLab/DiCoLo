@@ -8,7 +8,6 @@ VisualizeGeneTSNE(
   dist = NULL,
   gene_embedding = NULL,
   gene_partition = NULL,
-  filtered = TRUE,
   perplexity = 30,
   text = TRUE,
   module_color = NULL
@@ -23,9 +22,6 @@ of \code{\link[=ObtainGeneTSNE]{ObtainGeneTSNE()}}). If NULL the embedding is co
 
 \item{gene_partition}{Named factor or character/logical vector of gene module
 assignments. If NULL, \code{\link[=ClusterGenes]{ClusterGenes()}} is called on \code{dist}.}
-
-\item{filtered}{Logical. Passed to \code{\link[=ClusterGenes]{ClusterGenes()}} when \code{gene_partition} is
-NULL. Default \code{TRUE}.}
 
 \item{perplexity}{Numeric. Passed to \code{\link[=ObtainGeneTSNE]{ObtainGeneTSNE()}} when
 \code{gene_embedding} is NULL. Default \code{30}.}

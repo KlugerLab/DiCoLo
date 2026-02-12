@@ -42,8 +42,6 @@ ObtainGeneTSNE <- function(dist, perplexity = 30) {
 #'   of [ObtainGeneTSNE()]). If NULL the embedding is computed from `dist`.
 #' @param gene_partition Named factor or character/logical vector of gene module
 #'   assignments. If NULL, [ClusterGenes()] is called on `dist`.
-#' @param filtered Logical. Passed to [ClusterGenes()] when `gene_partition` is
-#'   NULL. Default `TRUE`.
 #' @param perplexity Numeric. Passed to [ObtainGeneTSNE()] when
 #'   `gene_embedding` is NULL. Default `30`.
 #' @param text Logical. If `TRUE` (default) and `gene_partition` is a factor,
@@ -66,11 +64,10 @@ ObtainGeneTSNE <- function(dist, perplexity = 30) {
 #' print(p)
 #' }
 VisualizeGeneTSNE <- function(dist = NULL, gene_embedding = NULL,
-                              gene_partition = NULL, filtered = TRUE,
-                              perplexity = 30, text = TRUE,
+                              gene_partition = NULL, perplexity = 30, text = TRUE,
                               module_color = NULL) {
   if (is.null(gene_partition)) {
-    gene_partition <- ClusterGenes(dist, filtered = filtered)
+    gene_partition <- ClusterGenes(dist)
   }
   if (is.null(gene_embedding)) {
     df <- ObtainGeneTSNE(dist, perplexity = perplexity)
