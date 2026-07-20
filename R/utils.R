@@ -64,7 +64,8 @@ inv_sqrt <- function(L_sym){
 #' \dontrun{
 #' evd <- RunSVD(P_diff)
 #' }
-RunSVD = function(K, eig_keep = nrow(K)){
+RunSVD = function(K, eig_keep = nrow(K), seed = 233){
+  set.seed(seed)
   E.list <- rARPACK::eigs_sym(K, k = eig_keep, which = "LM")
   rownames(E.list$vectors) = rownames(K)
   return(E.list)

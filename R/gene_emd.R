@@ -76,7 +76,8 @@ SelectCommonGenes <- function(srat1, srat2, ngenes = 500){
 #' ComputeGeneEMD(srat, common_genes, dir.path = "results/emd/")
 #' }
 ComputeGeneEMD <- function(srat, common_genes, dir.path, script_dir = NULL,
-                           npc = 10, K = 10, reduction = "dm") {
+                           npc = 10, K = 10, reduction = "dm", seed = 233) {
+  set.seed(seed)
   genes <- common_genes
   srat  <- GeneTrajectory::RunDM(srat, dims = 1:npc, K = K)
 
